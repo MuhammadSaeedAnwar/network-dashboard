@@ -46,13 +46,17 @@ def nmap_available() -> bool:
     return shutil.which("nmap") is not None
 
 
-def run_nmap_scan(target: str, top_ports: int, timeout_seconds: int) -> ScanOutcome:
-    """Run `nmap -sT -T3 --top-ports N -oX - <target>` and parse the result.
+def run_nmap_scan(
+    target: str,
+    top_ports: int,
+    timeout_seconds: int,
+    expected_ports: list[int] | None = None,
+) -> ScanOutcome:
+    """Run Nmap top-port discovery and optionally verify expected ports.
 
-    `target` must already have passed validate_single_target() -- this
-    function does not re-validate, by design, so it stays a single-purpose
-    "run and parse" function; callers are responsible for validation and
-    authorization checks (see routers/scans.py).
+    The target must already have passed validate_single_target(). For Docker
+    local testing, loopback targets are mapped to the host gateway so Nmap
+    scans the machine hosting the containers rather than the backend itself.
     """
     if not nmap_available():
         raise NmapNotAvailableError(
@@ -60,26 +64,69 @@ def run_nmap_scan(target: str, top_ports: int, timeout_seconds: int) -> ScanOutc
             "'sudo apt install nmap' (see README)."
         )
 
-    cmd = ["nmap", "-sT", "-T3", "--top-ports", str(top_ports), "-oX", "-", target]
-    try:
-        result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=timeout_seconds
-        )
-    except subprocess.TimeoutExpired:
-        return ScanOutcome(success=False, error_detail=f"nmap scan timed out after {timeout_seconds}s")
+    scan_target = "host.docker.internal" if target in {"127.0.0.1", "localhost"} else target
 
-    if result.returncode != 0:
-        return ScanOutcome(
-            success=False,
-            error_detail=f"nmap exited with code {result.returncode}: {result.stderr.strip()[:500]}",
-        )
+    def run_command(cmd: list[str]) -> ScanOutcome:
+        try:
+            result = subprocess.run(
+                cmd, capture_output=True, text=True, timeout=timeout_seconds
+            )
+        except subprocess.TimeoutExpired:
+            return ScanOutcome(
+                success=False,
+                error_detail=f"nmap scan timed out after {timeout_seconds}s",
+            )
 
-    try:
-        ports = _parse_xml(result.stdout)
-    except ET.ParseError as exc:
-        return ScanOutcome(success=False, error_detail=f"Failed to parse nmap XML output: {exc}")
+        if result.returncode != 0:
+            return ScanOutcome(
+                success=False,
+                error_detail=(
+                    f"nmap exited with code {result.returncode}: "
+                    f"{result.stderr.strip()[:500]}"
+                ),
+            )
 
-    return ScanOutcome(success=True, ports=ports)
+        try:
+            ports = _parse_xml(result.stdout)
+        except ET.ParseError as exc:
+            return ScanOutcome(
+                success=False,
+                error_detail=f"Failed to parse nmap XML output: {exc}",
+            )
+
+        return ScanOutcome(success=True, ports=ports)
+
+    top_cmd = [
+        "nmap", "-sT", "-T3", "--top-ports", str(top_ports),
+        "-oX", "-", scan_target,
+    ]
+    top_outcome = run_command(top_cmd)
+
+    if not top_outcome.success:
+        return top_outcome
+
+    if not expected_ports:
+        return top_outcome
+
+    unique_expected = sorted(set(expected_ports))
+    expected_cmd = [
+        "nmap", "-sT", "-T3",
+        "-p", ",".join(str(port) for port in unique_expected),
+        "-oX", "-", scan_target,
+    ]
+    expected_outcome = run_command(expected_cmd)
+
+    if not expected_outcome.success:
+        return expected_outcome
+
+    merged: dict[tuple[str, int], ParsedPort] = {
+        (port.protocol, port.port_number): port
+        for port in top_outcome.ports
+    }
+    for port in expected_outcome.ports:
+        merged[(port.protocol, port.port_number)] = port
+
+    return ScanOutcome(success=True, ports=list(merged.values()))
 
 
 def _parse_xml(xml_text: str) -> list[ParsedPort]:

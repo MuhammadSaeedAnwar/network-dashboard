@@ -84,3 +84,91 @@ def test_command_never_uses_shell_and_target_is_isolated_arg():
 
     source = inspect.getsource(run_nmap_scan)
     assert "shell=True" not in source
+
+
+@patch("app.services.nmap_scanner.shutil.which", return_value="/usr/bin/nmap")
+@patch("app.services.nmap_scanner.subprocess.run")
+def test_expected_ports_are_added_to_top_port_scan(mock_run, mock_which):
+    xml = """<?xml version="1.0"?>
+    <nmaprun>
+      <host>
+        <ports>
+          <port protocol="tcp" portid="8000">
+            <state state="open"/>
+          </port>
+          <port protocol="tcp" portid="8080">
+            <state state="open"/>
+          </port>
+        </ports>
+      </host>
+    </nmaprun>
+    """
+
+    mock_run.return_value = subprocess.CompletedProcess(
+        args=[],
+        returncode=0,
+        stdout=xml,
+        stderr="",
+    )
+
+    outcome = run_nmap_scan(
+        "127.0.0.1",
+        top_ports=100,
+        timeout_seconds=30,
+        expected_ports=[8000, 8080, 8080],
+    )
+
+    assert outcome.success is True
+    assert {p.port_number for p in outcome.ports} == {8000, 8080}
+
+    assert mock_run.call_count == 2
+
+    top_command = mock_run.call_args_list[0].args[0]
+    expected_command = mock_run.call_args_list[1].args[0]
+
+    assert "--top-ports" in top_command
+    assert "100" in top_command
+    assert "-p" not in top_command
+    assert top_command[-1] == "host.docker.internal"
+
+    assert "-p" in expected_command
+    assert expected_command[expected_command.index("-p") + 1] == "8000,8080"
+    assert expected_command[-1] == "host.docker.internal"
+
+
+@patch("app.services.nmap_scanner.shutil.which", return_value="/usr/bin/nmap")
+@patch("app.services.nmap_scanner.subprocess.run")
+def test_scan_without_expected_ports_keeps_top_ports_only(mock_run, mock_which):
+    xml = """<?xml version="1.0"?>
+    <nmaprun>
+      <host>
+        <ports>
+          <port protocol="tcp" portid="8000">
+            <state state="open"/>
+          </port>
+        </ports>
+      </host>
+    </nmaprun>
+    """
+
+    mock_run.return_value = subprocess.CompletedProcess(
+        args=[],
+        returncode=0,
+        stdout=xml,
+        stderr="",
+    )
+
+    outcome = run_nmap_scan(
+        "127.0.0.1",
+        top_ports=100,
+        timeout_seconds=30,
+    )
+
+    assert outcome.success is True
+
+    assert mock_run.call_count == 1
+    command = mock_run.call_args_list[0].args[0]
+    assert "--top-ports" in command
+    assert "100" in command
+    assert "-p" not in command
+    assert command[-1] == "host.docker.internal"

@@ -54,7 +54,12 @@ def create_scan(host_id: int, payload: ScanRequest, db: Session = Depends(get_db
     logger.info(f"Starting nmap scan id={scan.id} host_id={host_id} target={target} top_ports={top_ports}")
 
     try:
-        outcome = run_nmap_scan(target, top_ports=top_ports, timeout_seconds=settings.nmap_timeout_seconds)
+        outcome = run_nmap_scan(
+            target,
+            top_ports=top_ports,
+            timeout_seconds=settings.nmap_timeout_seconds,
+            expected_ports=host.expected_ports,
+        )
     except NmapNotAvailableError as exc:
         scan.status = "failed"
         scan.error_detail = str(exc)
