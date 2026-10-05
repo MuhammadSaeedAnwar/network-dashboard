@@ -1,6 +1,6 @@
 # Network Troubleshooting & Security Dashboard
 
-A dashboard for running **authorized-only** network diagnostics and basic
+A dashboard for running ** authorised-only ** network diagnostics and basic
 Nmap service discovery against hosts you own or are explicitly permitted
 to test — with results stored in PostgreSQL, automatic issue detection,
 and a REST API + React frontend.
@@ -231,7 +231,7 @@ with `ON DELETE CASCADE`.
   service/version banners), nothing more.
 - **Secrets only via environment variables.** `.env` (git-ignored) holds
   the Postgres password; nothing sensitive is hardcoded or checked in.
-- **Database**: parameterized queries only, via SQLAlchemy's ORM (no
+- **Database**: parameterised queries only, via SQLAlchemy's ORM (no
   raw string-built SQL anywhere in the codebase).
 - **Docker**: backend container runs as a non-root user (uid 1000).
   Nmap's `-sT` mode doesn't need elevated privileges, so no extra
