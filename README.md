@@ -16,40 +16,43 @@ and troubleshooting tooling — not a general-purpose security scanner.
 
 ## Screenshots
 
-These images show the dashboard in its core operating states: high-level
-summary, alert review, per-host diagnostics, and security/activity monitoring.
+Portfolio demo with simulated data—no live hosts are scanned. The views below show the dashboard's core workflows: overview, alert triage, per-host diagnostics, and the authorization gates that prevent unauthorized scanning.
 
 ### Dashboard overview
 
 ![Dashboard overview](docs/screenshots/network-dashboard-overview.svg)
 
-### Open alerts
+**Summary view.** Host status cards (OK/Warning/Critical), latency, open port counts, and alert queue at a glance.
+
+### Alert queue
 
 ![Open alerts](docs/screenshots/network-dashboard-alerts.svg)
 
-### Host detail view
+**Triage and resolve.** Alert severity, source (health check or scan), and one-click resolution.
+
+### Host detail: production (healthy)
 
 ![Host detail view](docs/screenshots/network-dashboard-host-detail.svg)
 
-### Security controls and recent activity
+**Full diagnostics.** Per-host latency, port discovery, and individual check results (ICMP, DNS, HTTP, TCP).
 
-![Security controls and recent activity](docs/screenshots/network-dashboard-security-activity.svg)
-
-### Development server warning state
+### Host detail: development (warning)
 
 ![Development server warning state](docs/screenshots/network-dashboard-development-warning.svg)
 
-### Development server diagnostics
+**Degraded state.** High latency and HTTP warnings trigger alerts without blocking the host view.
 
-![Development server diagnostics](docs/screenshots/network-dashboard-development-diagnostics.svg)
-
-### Database server diagnostics
+### Host detail: database (critical)
 
 ![Database server diagnostics](docs/screenshots/network-dashboard-database-diagnostics.svg)
 
-### Recent activity and authorization state
+**Unreachable host.** When a target doesn't respond, the dashboard captures timeout failures and surfaces them clearly.
 
-![Recent activity and authorization state](docs/screenshots/network-dashboard-activity-authorization.svg)
+### Security controls and activity log
+
+![Security controls and recent activity](docs/screenshots/network-dashboard-security-activity.svg)
+
+**Authorization + audit.** Live toggle indicators for authorization gates and a detailed activity log of every check and scan.
 
 ## 1. Architecture
 
@@ -263,7 +266,7 @@ with `ON DELETE CASCADE`.
   concatenated into a command. Target strings are validated before they
   ever reach a command line.
 - **No exploitation, credential attacks, persistence, evasion, or
-  malware** of any kind — this is a read-only observability tool.
+  malware** of any kind �� this is a read-only observability tool.
   Scanning is limited to basic TCP service discovery (open ports +
   service/version banners), nothing more.
 - **Secrets only via environment variables.** `.env` (git-ignored) holds
