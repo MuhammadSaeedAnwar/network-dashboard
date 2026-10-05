@@ -1,111 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
-  <defs>
-    <style>
-      .bg { fill: #f3f3f3; }
-      .panel { fill: #f8f8f8; stroke: #d3d7dc; stroke-width: 2; }
-      .small { font: 600 18px 'Segoe UI', sans-serif; fill: #6d7580; letter-spacing: 2px; }
-      .header { font: 700 42px 'Segoe UI', sans-serif; fill: #2b2d31; }
-      .sub { font: 400 24px 'Segoe UI', sans-serif; fill: #69757f; }
-      .box { fill: #f5f5f5; stroke: #d9dde2; stroke-width: 2; }
-      .cardnum { font: 700 48px 'Segoe UI', sans-serif; fill: #2b2d31; }
-      .cardlabel { font: 600 18px 'Segoe UI', sans-serif; fill: #6a707a; letter-spacing: 2px; }
-      .title { font: 700 30px 'Segoe UI', sans-serif; fill: #2c3239; }
-      .oneline { font: 600 22px 'Segoe UI', sans-serif; fill: #303840; }
-      .tablehead { font: 600 18px 'Segoe UI', sans-serif; fill: #727a82; letter-spacing: 2px; }
-      .tablecell { font: 500 19px 'Segoe UI', sans-serif; fill: #2e343b; }
-      .pill { fill: #d7f0dc; stroke: #3d8a5b; stroke-width: 1.5; }
-      .pilltext { font: 700 16px 'Segoe UI', sans-serif; fill: #0e8f4f; }
-      .line { stroke: #dfe4ea; stroke-width: 1.5; }
-      .button { fill: #f4f4f4; stroke: #d3d7de; stroke-width: 1.5; }
-      .buttontext { font: 600 20px 'Segoe UI', sans-serif; fill: #4a535c; }
-    </style>
-  </defs>
+  <rect width="1400" height="760" fill="#f3f3f3"/>
+  <text x="100" y="90" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Network Troubleshooting &amp; Security Dashboard</text>
+  <text x="100" y="130" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#6a7280">Authorized-only diagnostics and service discovery for hosts you own or are explicitly authorized to test.</text>
+  <text x="100" y="170" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#6d7580" letter-spacing="1.5">PORTFOLIO DEMO MODE</text>
+  <text x="850" y="170" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#6d7580" letter-spacing="1.5">SIMULATED DIAGNOSTIC RESULTS</text>
 
-  <rect class="bg" width="1400" height="760"/>
-
-  <text x="100" y="90" class="header">Network Troubleshooting &amp; Security Dashboard</text>
-  <text x="100" y="130" class="sub">Authorized-only diagnostics and service discovery for hosts you own or are explicitly authorized to test.</text>
-
-  <text x="100" y="170" class="small">PORTFOLIO DEMO MODE</text>
-  <text x="980" y="170" class="small">This demonstration uses simulated monitoring data. No live systems are scanned.</text>
-
-  <g transform="translate(100,200)">
-    <rect x="0" y="0" width="1200" height="140" class="panel"/>
-    <rect x="22" y="23" width="146" height="90" class="box"/>
-    <text x="95" y="68" text-anchor="middle" class="cardnum">3</text>
-    <text x="95" y="92" text-anchor="middle" class="cardlabel">TOTAL HOSTS</text>
-
-    <rect x="188" y="23" width="146" height="90" class="box"/>
-    <text x="261" y="68" text-anchor="middle" class="cardnum" style="fill:#2d8b52;">1</text>
-    <text x="261" y="92" text-anchor="middle" class="cardlabel">OK</text>
-
-    <rect x="354" y="23" width="146" height="90" class="box"/>
-    <text x="427" y="68" text-anchor="middle" class="cardnum" style="fill:#c38b2d;">1</text>
-    <text x="427" y="92" text-anchor="middle" class="cardlabel">WARNING</text>
-
-    <rect x="520" y="23" width="146" height="90" class="box"/>
-    <text x="593" y="68" text-anchor="middle" class="cardnum" style="fill:#c64b4b;">1</text>
-    <text x="593" y="92" text-anchor="middle" class="cardlabel">CRITICAL</text>
-
-    <rect x="686" y="23" width="146" height="90" class="box"/>
-    <text x="759" y="68" text-anchor="middle" class="cardnum">0</text>
-    <text x="759" y="92" text-anchor="middle" class="cardlabel">UNKNOWN</text>
-
-    <rect x="852" y="23" width="146" height="90" class="box"/>
-    <text x="925" y="68" text-anchor="middle" class="cardnum" style="fill:#8d54c7;">2</text>
-    <text x="925" y="92" text-anchor="middle" class="cardlabel">OPEN ALERTS</text>
-
-    <rect x="1018" y="23" width="146" height="90" class="box"/>
-    <text x="1091" y="68" text-anchor="middle" class="cardnum" style="fill:#8d54c7;">8</text>
-    <text x="1091" y="92" text-anchor="middle" class="cardlabel">TOTAL SCANS</text>
+  <g transform="translate(100,210)">
+    <rect x="0" y="0" width="1200" height="110" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="30" y="38" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">HOST DETAILS</text>
+    <text x="30" y="82" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Production Web Server</text>
+    <text x="1080" y="38" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">OK</text>
+    <rect x="1050" y="48" width="90" height="28" rx="14" fill="#d8f0dc" stroke="#3a8b58" stroke-width="1.5"/>
+    <text x="1095" y="68" text-anchor="middle" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0d8d4e">OK</text>
+    <text x="30" y="106" font-size="28" font-family="Segoe UI, Arial, sans-serif" fill="#303840">192.168.1.20</text>
   </g>
 
-  <g transform="translate(100,370)">
-    <rect x="0" y="0" width="1200" height="280" class="panel"/>
-    <text x="30" y="52" class="title">Monitored hosts</text>
-    <line x1="30" y1="72" x2="1170" y2="72" class="line"/>
-    <text x="30" y="102" class="tablehead">NAME</text>
-    <text x="248" y="102" class="tablehead">ADDRESS</text>
-    <text x="440" y="102" class="tablehead">STATUS</text>
-    <text x="620" y="102" class="tablehead">LATENCY</text>
-    <text x="760" y="102" class="tablehead">OPEN PORTS</text>
-    <text x="915" y="102" class="tablehead">ALERTS</text>
-    <text x="1000" y="102" class="tablehead">LAST CHECKED</text>
+  <g transform="translate(100,345)">
+    <rect x="0" y="0" width="1200" height="110" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <rect x="30" y="25" width="250" height="60" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="155" y="58" text-anchor="middle" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">24 ms</text>
+    <text x="155" y="84" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#677179" letter-spacing="2">LATENCY</text>
 
-    <line x1="30" y1="120" x2="1170" y2="120" class="line"/>
-    <text x="30" y="156" class="tablecell" style="fill:#2d63a6; font-weight:600;">Production Web Server</text>
-    <text x="248" y="156" class="tablecell">192.168.1.20</text>
-    <rect x="440" y="134" width="90" height="28" rx="14" class="pill"/>
-    <text x="485" y="154" text-anchor="middle" class="pilltext">OK</text>
-    <text x="620" y="156" class="tablecell">24.0 ms</text>
-    <text x="760" y="156" class="tablecell">3</text>
-    <text x="915" y="156" class="tablecell">0</text>
-    <text x="1000" y="156" class="tablecell">10/5/2026, 10:30:00 PM</text>
-    <rect x="1130" y="132" width="70" height="32" rx="6" class="button"/>
-    <text x="1165" y="154" text-anchor="middle" class="buttontext">Delete</text>
+    <rect x="310" y="25" width="250" height="60" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="435" y="58" text-anchor="middle" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">3</text>
+    <text x="435" y="84" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#677179" letter-spacing="2">OPEN PORTS</text>
 
-    <line x1="30" y1="175" x2="1170" y2="175" class="line"/>
-    <text x="30" y="210" class="tablecell" style="fill:#2d63a6; font-weight:600;">Development Server</text>
-    <text x="248" y="210" class="tablecell">192.168.1.35</text>
-    <rect x="440" y="188" width="110" height="28" rx="14" style="fill:#f4e8c8; stroke:#d0a954; stroke-width:1.5;"/>
-    <text x="495" y="208" text-anchor="middle" style="font:700 16px 'Segoe UI', sans-serif; fill:#b77b1f;">WARNING</text>
-    <text x="620" y="210" class="tablecell">142.0 ms</text>
-    <text x="760" y="210" class="tablecell">2</text>
-    <text x="915" y="210" class="tablecell">1</text>
-    <text x="1000" y="210" class="tablecell">10/5/2026, 10:25:00 PM</text>
-    <rect x="1130" y="188" width="70" height="32" rx="6" class="button"/>
-    <text x="1165" y="210" text-anchor="middle" class="buttontext">Delete</text>
+    <rect x="590" y="25" width="250" height="60" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="715" y="58" text-anchor="middle" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">0</text>
+    <text x="715" y="84" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#677179" letter-spacing="2">OPEN ALERTS</text>
 
-    <line x1="30" y1="230" x2="1170" y2="230" class="line"/>
-    <text x="30" y="265" class="tablecell" style="fill:#2d63a6; font-weight:600;">Database Server</text>
-    <text x="248" y="265" class="tablecell">192.168.1.40</text>
-    <rect x="440" y="243" width="104" height="28" rx="14" style="fill:#f9d9d9; stroke:#ca6969; stroke-width:1.5;"/>
-    <text x="492" y="263" text-anchor="middle" style="font:700 16px 'Segoe UI', sans-serif; fill:#c24949;">CRITICAL</text>
-    <text x="620" y="265" class="tablecell">—</text>
-    <text x="760" y="265" class="tablecell">0</text>
-    <text x="915" y="265" class="tablecell">1</text>
-    <text x="1000" y="265" class="tablecell">10/5/2026, 10:20:00 PM</text>
-    <rect x="1130" y="243" width="70" height="32" rx="6" class="button"/>
-    <text x="1165" y="265" text-anchor="middle" class="buttontext">Delete</text>
+    <rect x="870" y="25" width="250" height="60" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="995" y="58" text-anchor="middle" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Yes</text>
+    <text x="995" y="84" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#677179" letter-spacing="2">AUTHORIZED</text>
+  </g>
+
+  <g transform="translate(100,485)">
+    <rect x="0" y="0" width="1200" height="220" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="30" y="42" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Diagnostic Checks</text>
+    <line x1="30" y1="60" x2="1170" y2="60" stroke="#dce1e7" stroke-width="1.5"/>
+
+    <text x="30" y="95" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">CHECK</text>
+    <text x="480" y="95" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">STATUS</text>
+    <text x="720" y="95" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">RESULT</text>
+
+    <line x1="30" y1="110" x2="1170" y2="110" stroke="#dce1e7" stroke-width="1.5"/>
+    <text x="30" y="150" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">ICMP Ping</text>
+    <text x="480" y="150" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">OK</text>
+    <text x="720" y="150" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">24 ms</text>
+
+    <text x="30" y="190" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">DNS Resolution</text>
+    <text x="480" y="190" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">OK</text>
+    <text x="720" y="190" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">12 ms</text>
+
+    <text x="30" y="230" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">HTTP Health</text>
+    <text x="480" y="230" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">OK</text>
+    <text x="720" y="230" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">31 ms</text>
+
+    <text x="30" y="270" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">TCP Connectivity</text>
+    <text x="480" y="270" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">OK</text>
+    <text x="720" y="270" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">18 ms</text>
   </g>
 </svg>

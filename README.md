@@ -16,8 +16,8 @@ and troubleshooting tooling — not a general-purpose security scanner.
 
 ## Screenshots
 
-These screenshots show the main dashboard views and the host-detail flow for
-this project.
+These images show the dashboard in its core operating states: high-level
+summary, alert review, per-host diagnostics, and security/activity monitoring.
 
 ### Dashboard overview
 
@@ -34,6 +34,22 @@ this project.
 ### Security controls and recent activity
 
 ![Security controls and recent activity](docs/screenshots/network-dashboard-security-activity.svg)
+
+### Development server warning state
+
+![Development server warning state](docs/screenshots/network-dashboard-development-warning.svg)
+
+### Development server diagnostics
+
+![Development server diagnostics](docs/screenshots/network-dashboard-development-diagnostics.svg)
+
+### Database server diagnostics
+
+![Database server diagnostics](docs/screenshots/network-dashboard-database-diagnostics.svg)
+
+### Recent activity and authorization state
+
+![Recent activity and authorization state](docs/screenshots/network-dashboard-activity-authorization.svg)
 
 ## 1. Architecture
 
@@ -230,12 +246,12 @@ with `ON DELETE CASCADE`.
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| Frontend shows "Could not reach the backend API" | Backend not running, or wrong `VITE_API_BASE_URL` | Check `docker compose logs backend`; confirm the URL baked into the frontend build matches wher[...]
+| Frontend shows "Could not reach the backend API" | Backend not running, or wrong `VITE_API_BASE_URL` | Check `docker compose logs backend`; confirm the URL baked into the frontend build matches where the app is served. |
 | `422 Unprocessable Entity` on adding a host | `authorized_confirmation` missing/false, or address looks like a CIDR range | Tick the authorization checkbox; use a single IP/hostname, not a `/24` |
-| Scans always fail with "nmap is not installed" | Running the backend outside Docker without nmap installed | `sudo apt install nmap`, or use `docker compose up` (nmap is baked into the backend image[...]
-| Ping checks report `critical`/permission errors inside Docker | Unprivileged ICMP sockets can be blocked by the container's default capabilities | See Security section — this is a known, documente[...]
-| `psycopg2.OperationalError: could not connect to server` | Postgres not up yet, or wrong `POSTGRES_HOST` | Wait for the `db` healthcheck; set `POSTGRES_HOST=localhost` if running the backend outside[...]
-| Packet-capture / tshark features do nothing | `ENABLE_PACKET_CAPTURE` is `false` by default, and tshark isn't installed in the backend image by default | Both are intentional — see Security sectio[...]
+| Scans always fail with "nmap is not installed" | Running the backend outside Docker without nmap installed | `sudo apt install nmap`, or use `docker compose up` (nmap is baked into the backend image). |
+| Ping checks report `critical`/permission errors inside Docker | Unprivileged ICMP sockets can be blocked by the container's default capabilities | See Security section — this is a known, documented limitation. |
+| `psycopg2.OperationalError: could not connect to server` | Postgres not up yet, or wrong `POSTGRES_HOST` | Wait for the `db` healthcheck; set `POSTGRES_HOST=localhost` if running the backend outside Docker. |
+| Packet-capture / tshark features do nothing | `ENABLE_PACKET_CAPTURE` is `false` by default, and tshark isn't installed in the backend image by default | Both are intentional — see Security section. |
 
 ## 10. Security considerations
 

@@ -1,539 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
-  <defs>
-    <style>
-      .bg { fill: #f3f3f3; }
-      .panel { fill: #f8f8f8; stroke: #d3d7dc; stroke-width: 2; rx: 16; }
-      .header { font: 700 42px 'Segoe UI', sans-serif; fill: #2b2d31; }
-      .sub { font: 400 24px 'Segoe UI', sans-serif; fill: #727a85; }
-      .small { font: 600 19px 'Segoe UI', sans-serif; fill: #656d77; letter-spacing: 1.5px; }
-      .metric { font: 700 48px 'Segoe UI', sans-serif; fill: #2b2d31; }
-      .metricblue { fill: #2e5f9b; }
-      .metricgreen { fill: #2d8b52; }
-      .metricamber { fill: #c38b2d; }
-      .metricred { fill: #c64b4b; }
-      .metricpurple { fill: #8d54c7; }
-      .metriclabel { font: 600 17px 'Segoe UI', sans-serif; fill: #676d77; letter-spacing: 2px; }
-      .tablehead { font: 600 18px 'Segoe UI', sans-serif; fill: #6a7079; letter-spacing: 2px; }
-      .row { font: 500 22px 'Segoe UI', sans-serif; fill: #32373f; }
-      .pill { fill: #d6f0df; stroke: #3f8b5a; stroke-width: 1.5; }
-      .pill2 { fill: #f5e8c8; stroke: #bf923f; stroke-width: 1.5; }
-      .pill3 { fill: #f7d8d8; stroke: #c75c5c; stroke-width: 1.5; }
-      .status { font: 700 16px 'Segoe UI', sans-serif; fill: #0f8d4f; }
-      .status2 { font: 700 16px 'Segoe UI', sans-serif; fill: #a86d1d; }
-      .status3 { font: 700 16px 'Segoe UI', sans-serif; fill: #b93f3f; }
-      .box { fill: #f4f4f4; stroke: #dfe3e8; stroke-width: 2; }
-      .button { fill: #f5f5f5; stroke: #c7ccd2; stroke-width: 1.5; }
-      .buttontext { font: 600 20px 'Segoe UI', sans-serif; fill: #4c5660; }
-      .link { fill: #2e63a6; font: 600 22px 'Segoe UI', sans-serif; }
-    </style>
-  </defs>
+  <rect width="1400" height="760" fill="#f3f3f3"/>
+  <text x="100" y="90" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Network Troubleshooting &amp; Security Dashboard</text>
+  <text x="100" y="130" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#6a7280">Authorized-only diagnostics and service discovery for hosts you own or are explicitly authorized to test.</text>
 
-  <rect class="bg" width="1400" height="760"/>
+  <g transform="translate(100,180)">
+    <rect x="0" y="0" width="1200" height="220" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="26" y="34" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#67707a" letter-spacing="1.5">PORTFOLIO DEMO MODE</text>
+    <text x="770" y="34" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#737d88">This demonstration uses simulated monitoring data. No live systems are scanned.</text>
 
-  <text x="100" y="90" class="header">Network Troubleshooting &amp; Security Dashboard</text>
-  <text x="100" y="130" class="sub">Authorized-only diagnostics and service discovery for hosts you own or are explicitly authorized to test.</text>
+    <rect x="30" y="70" width="150" height="110" rx="10" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="105" y="120" text-anchor="middle" font-size="48" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2d5d90">3</text>
+    <text x="105" y="155" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#68727b" letter-spacing="2">TOTAL HOSTS</text>
 
-  <g transform="translate(100,170)">
-    <rect x="0" y="0" width="1200" height="220" class="panel"/>
-    <text x="20" y="52" class="small">PORTFOLIO DEMO MODE</text>
-    <text x="915" y="52" class="small">This demonstration uses simulated monitoring data. No live systems are scanned.</text>
+    <rect x="220" y="70" width="150" height="110" rx="10" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="295" y="120" text-anchor="middle" font-size="48" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2d8b52">1</text>
+    <text x="295" y="155" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#68727b" letter-spacing="2">OK</text>
 
-    <rect x="35" y="75" width="150" height="110" class="box" />
-    <text x="110" y="122" text-anchor="middle" class="metric metricblue">3</text>
-    <text x="110" y="160" text-anchor="middle" class="metriclabel">TOTAL HOSTS</text>
+    <rect x="410" y="70" width="150" height="110" rx="10" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="485" y="120" text-anchor="middle" font-size="48" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c38b2d">1</text>
+    <text x="485" y="155" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#68727b" letter-spacing="2">WARNING</text>
 
-    <rect x="225" y="75" width="150" height="110" class="box" />
-    <text x="300" y="122" text-anchor="middle" class="metric metricgreen">1</text>
-    <text x="300" y="160" text-anchor="middle" class="metriclabel">OK</text>
+    <rect x="600" y="70" width="150" height="110" rx="10" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="675" y="120" text-anchor="middle" font-size="48" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c64b4b">1</text>
+    <text x="675" y="155" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#68727b" letter-spacing="2">CRITICAL</text>
 
-    <rect x="415" y="75" width="150" height="110" class="box" />
-    <text x="490" y="122" text-anchor="middle" class="metric metricamber">1</text>
-    <text x="490" y="160" text-anchor="middle" class="metriclabel">WARNING</text>
+    <rect x="790" y="70" width="150" height="110" rx="10" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="865" y="120" text-anchor="middle" font-size="48" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">0</text>
+    <text x="865" y="155" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#68727b" letter-spacing="2">UNKNOWN</text>
 
-    <rect x="605" y="75" width="150" height="110" class="box" />
-    <text x="680" y="122" text-anchor="middle" class="metric metricred">1</text>
-    <text x="680" y="160" text-anchor="middle" class="metriclabel">CRITICAL</text>
-
-    <rect x="795" y="75" width="150" height="110" class="box" />
-    <text x="870" y="122" text-anchor="middle" class="metric">0</text>
-    <text x="870" y="160" text-anchor="middle" class="metriclabel">UNKNOWN</text>
-
-    <rect x="985" y="75" width="150" height="110" class="box" />
-    <text x="1060" y="122" text-anchor="middle" class="metric metricpurple">2</text>
-    <text x="1060" y="160" text-anchor="middle" class="metriclabel">OPEN ALERTS</text>
-
-    <rect x="1175" y="75" width="150" height="110" class="box" />
-    <text x="1250" y="122" text-anchor="middle" class="metric metricpurple">8</text>
-    <text x="1250" y="160" text-anchor="middle" class="metriclabel">TOTAL SCANS</text>
+    <rect x="980" y="70" width="150" height="110" rx="10" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="1055" y="120" text-anchor="middle" font-size="48" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#8d54c7">2</text>
+    <text x="1055" y="155" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#68727b" letter-spacing="2">OPEN ALERTS</text>
   </g>
 
-  <g transform="translate(100,410)">
-    <rect x="0" y="0" width="1200" height="230" class="panel"/>
-    <text x="30" y="48" class="header" style="font-size:34px;">Monitored hosts</text>
+  <g transform="translate(100,430)">
+    <rect x="0" y="0" width="1200" height="230" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="30" y="44" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2a2e34">Monitored hosts</text>
+    <line x1="30" y1="68" x2="1170" y2="68" stroke="#d5d9de" stroke-width="2"/>
 
-    <line x1="30" y1="70" x2="1170" y2="70" stroke="#d1d5db" stroke-width="2"/>
-    <text x="30" y="100" class="tablehead">NAME</text>
-    <text x="260" y="100" class="tablehead">ADDRESS</text>
-    <text x="470" y="100" class="tablehead">STATUS</text>
-    <text x="660" y="100" class="tablehead">LATENCY</text>
-    <text x="770" y="100" class="tablehead">OPEN PORTS</text>
-    <text x="940" y="100" class="tablehead">ALERTS</text>
-    <text x="1020" y="100" class="tablehead">LAST CHECKED</text>
+    <text x="35" y="100" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">NAME</text>
+    <text x="260" y="100" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">ADDRESS</text>
+    <text x="470" y="100" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">STATUS</text>
+    <text x="650" y="100" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">LATENCY</text>
+    <text x="770" y="100" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">OPEN PORTS</text>
+    <text x="940" y="100" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">ALERTS</text>
+    <text x="1020" y="100" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">LAST CHECKED</text>
 
-    <line x1="30" y1="120" x2="1170" y2="120" stroke="#e5e7eb" stroke-width="1.5"/>
-    <text x="30" y="155" class="row" style="font-weight:600; fill:#2e63a6;">Production Web Server</text>
-    <text x="260" y="155" class="row">192.168.1.20</text>
-    <rect x="470" y="130" width="78" height="28" rx="14" class="pill"/>
-    <text x="509" y="150" text-anchor="middle" class="status">OK</text>
-    <text x="660" y="155" class="row">24.0 ms</text>
-    <text x="770" y="155" class="row">3</text>
-    <text x="940" y="155" class="row">0</text>
-    <text x="1020" y="155" class="row">10/5/2026, 10:30:00 PM</text>
-    <rect x="1135" y="132" width="72" height="34" rx="6" class="button"/>
-    <text x="1171" y="156" text-anchor="middle" class="buttontext">Delete</text>
+    <line x1="30" y1="120" x2="1170" y2="120" stroke="#e1e5ea" stroke-width="1.5"/>
 
-    <line x1="30" y1="175" x2="1170" y2="175" stroke="#e5e7eb" stroke-width="1.5"/>
-    <text x="30" y="210" class="row" style="font-weight:600; fill:#2e63a6;">Development Server</text>
-    <text x="260" y="210" class="row">192.168.1.35</text>
-    <rect x="470" y="185" width="94" height="28" rx="14" class="pill2"/>
-    <text x="517" y="205" text-anchor="middle" class="status2">WARNING</text>
-    <text x="660" y="210" class="row">142.0 ms</text>
-    <text x="770" y="210" class="row">2</text>
-    <text x="940" y="210" class="row">1</text>
-    <text x="1020" y="210" class="row">10/5/2026, 10:25:00 PM</text>
-    <rect x="1135" y="186" width="72" height="34" rx="6" class="button"/>
-    <text x="1171" y="210" text-anchor="middle" class="buttontext">Delete</text>
+    <text x="35" y="155" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#2f63a7">Production Web Server</text>
+    <text x="260" y="155" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">192.168.1.20</text>
+    <rect x="470" y="132" width="86" height="28" rx="14" fill="#d8f0dc" stroke="#3f8d61" stroke-width="1.5"/>
+    <text x="513" y="151" text-anchor="middle" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0d8d4c">OK</text>
+    <text x="650" y="155" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">24.0 ms</text>
+    <text x="770" y="155" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">3</text>
+    <text x="940" y="155" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">0</text>
+    <text x="1020" y="155" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">10/5/2026, 10:30:00 PM</text>
+    <rect x="1135" y="130" width="72" height="34" rx="6" fill="#f5f5f5" stroke="#c7ccd2" stroke-width="1.5"/>
+    <text x="1171" y="154" text-anchor="middle" font-size="19" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#4c5660">Delete</text>
 
-    <line x1="30" y1="230" x2="1170" y2="230" stroke="#e5e7eb" stroke-width="1.5"/>
-    <text x="30" y="265" class="row" style="font-weight:600; fill:#2e63a6;">Database Server</text>
-    <text x="260" y="265" class="row">192.168.1.40</text>
-    <rect x="470" y="240" width="90" height="28" rx="14" class="pill3"/>
-    <text x="515" y="260" text-anchor="middle" class="status3">CRITICAL</text>
-    <text x="660" y="265" class="row">—</text>
-    <text x="770" y="265" class="row">0</text>
-    <text x="940" y="265" class="row">1</text>
-    <text x="1020" y="265" class="row">10/5/2026, 10:20:00 PM</text>
-    <rect x="1135" y="240" width="72" height="34" rx="6" class="button"/>
-    <text x="1171" y="264" text-anchor="middle" class="buttontext">Delete</text>
+    <line x1="30" y1="175" x2="1170" y2="175" stroke="#e1e5ea" stroke-width="1.5"/>
+    <text x="35" y="210" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#2f63a7">Development Server</text>
+    <text x="260" y="210" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">192.168.1.35</text>
+    <rect x="470" y="187" width="110" height="28" rx="14" fill="#f6e9c9" stroke="#c49d42" stroke-width="1.5"/>
+    <text x="525" y="206" text-anchor="middle" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#a86d1d">WARNING</text>
+    <text x="650" y="210" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">142.0 ms</text>
+    <text x="770" y="210" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">2</text>
+    <text x="940" y="210" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">1</text>
+    <text x="1020" y="210" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">10/5/2026, 10:25:00 PM</text>
+    <rect x="1135" y="186" width="72" height="34" rx="6" fill="#f5f5f5" stroke="#c7ccd2" stroke-width="1.5"/>
+    <text x="1171" y="210" text-anchor="middle" font-size="19" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#4c5660">Delete</text>
+
+    <line x1="30" y1="230" x2="1170" y2="230" stroke="#e1e5ea" stroke-width="1.5"/>
+    <text x="35" y="265" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#2f63a7">Database Server</text>
+    <text x="260" y="265" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">192.168.1.40</text>
+    <rect x="470" y="242" width="108" height="28" rx="14" fill="#f8d9d9" stroke="#c87070" stroke-width="1.5"/>
+    <text x="524" y="261" text-anchor="middle" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c24848">CRITICAL</text>
+    <text x="650" y="265" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">—</text>
+    <text x="770" y="265" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">0</text>
+    <text x="940" y="265" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">1</text>
+    <text x="1020" y="265" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">10/5/2026, 10:20:00 PM</text>
+    <rect x="1135" y="242" width="72" height="34" rx="6" fill="#f5f5f5" stroke="#c7ccd2" stroke-width="1.5"/>
+    <text x="1171" y="266" text-anchor="middle" font-size="19" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#4c5660">Delete</text>
   </g>
 </svg>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

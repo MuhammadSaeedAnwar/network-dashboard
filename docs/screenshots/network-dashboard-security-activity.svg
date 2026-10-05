@@ -1,87 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
-  <defs>
-    <style>
-      .bg { fill: #f3f3f3; }
-      .panel { fill: #f8f8f8; stroke: #d3d7dc; stroke-width: 2; }
-      .header { font: 700 42px 'Segoe UI', sans-serif; fill: #2b2d31; }
-      .sub { font: 400 24px 'Segoe UI', sans-serif; fill: #6c7480; }
-      .small { font: 600 18px 'Segoe UI', sans-serif; fill: #69737d; letter-spacing: 2px; }
-      .box { fill: #f5f5f5; stroke: #d9dde2; stroke-width: 2; }
-      .cardnum { font: 700 48px 'Segoe UI', sans-serif; fill: #2b2d31; }
-      .cardlabel { font: 600 18px 'Segoe UI', sans-serif; fill: #66727b; letter-spacing: 2px; }
-      .host { font: 700 40px 'Segoe UI', sans-serif; fill: #2b2d31; }
-      .ip { font: 400 30px 'Segoe UI', sans-serif; fill: #2f353c; }
-      .pill { fill: #d8f0dd; stroke: #3a8b58; stroke-width: 1.5; }
-      .pilltext { font: 700 16px 'Segoe UI', sans-serif; fill: #0d8d4e; }
-      .section { font: 700 30px 'Segoe UI', sans-serif; fill: #2d3339; }
-      .tablehead { font: 600 18px 'Segoe UI', sans-serif; fill: #6b727b; letter-spacing: 2px; }
-      .tablecell { font: 500 20px 'Segoe UI', sans-serif; fill: #2c3239; }
-      .button { fill: #f5f5f5; stroke: #c7ccd2; stroke-width: 1.5; }
-      .buttontext { font: 600 20px 'Segoe UI', sans-serif; fill: #4d5862; }
-      .line { stroke: #dfe4ea; stroke-width: 1.6; }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
+  <rect width="1400" height="620" fill="#f3f3f3"/>
+  <g transform="translate(100,60)">
+    <rect x="0" y="0" width="1200" height="500" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="30" y="52" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Security Controls</text>
+    <rect x="30" y="90" width="230" height="90" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="145" y="118" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">AUTHORIZATION GATE</text>
+    <text x="145" y="149" text-anchor="middle" font-size="23" font-family="Segoe UI, Arial, sans-serif" fill="#2d333a">Enabled</text>
 
-  <rect class="bg" width="1400" height="760"/>
+    <rect x="290" y="90" width="230" height="90" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="405" y="118" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">TARGET VALIDATION</text>
+    <text x="405" y="149" text-anchor="middle" font-size="23" font-family="Segoe UI, Arial, sans-serif" fill="#2d333a">Enabled</text>
 
-  <text x="100" y="90" class="header">Network Troubleshooting &amp; Security Dashboard</text>
-  <text x="100" y="130" class="sub">Authorized-only diagnostics and service discovery for hosts you own or are explicitly authorized to test.</text>
+    <rect x="550" y="90" width="230" height="90" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="665" y="118" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">STRUCTURED LOGGING</text>
+    <text x="665" y="149" text-anchor="middle" font-size="23" font-family="Segoe UI, Arial, sans-serif" fill="#2d333a">Enabled</text>
 
-  <text x="100" y="170" class="small">PORTFOLIO DEMO MODE</text>
-  <text x="820" y="170" class="small">Simulated diagnostic results — no live systems are scanned.</text>
+    <rect x="810" y="90" width="230" height="90" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="925" y="118" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">DEMO SCAN ISOLATION</text>
+    <text x="925" y="149" text-anchor="middle" font-size="23" font-family="Segoe UI, Arial, sans-serif" fill="#2d333a">Active</text>
 
-  <g transform="translate(100,205)">
-    <rect x="0" y="0" width="1200" height="110" class="panel"/>
-    <text x="28" y="36" class="small">HOST DETAILS</text>
-    <text x="28" y="82" class="host">Production Web Server</text>
-    <text x="1035" y="36" class="small">ok</text>
-    <rect x="1008" y="44" width="90" height="28" rx="14" class="pill"/>
-    <text x="1053" y="65" text-anchor="middle" class="pilltext">OK</text>
-    <text x="28" y="108" class="ip">192.168.1.20</text>
-  </g>
+    <rect x="30" y="230" width="1010" height="210" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="60" y="272" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Recent Activity</text>
 
-  <g transform="translate(100,335)">
-    <rect x="0" y="0" width="1200" height="118" class="panel"/>
-    <rect x="30" y="24" width="250" height="70" class="box"/>
-    <text x="155" y="58" text-anchor="middle" class="cardnum">24 ms</text>
-    <text x="155" y="82" text-anchor="middle" class="cardlabel">LATENCY</text>
+    <line x1="60" y1="295" x2="1010" y2="295" stroke="#d8dce2" stroke-width="1.5"/>
+    <text x="60" y="335" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#2b2d31">Health checks completed</text>
+    <text x="60" y="360" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#5d6671">ICMP, DNS, HTTP and TCP checks for 192.168.1.35</text>
+    <text x="905" y="335" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#5d6671">10/5/2026, 10:30 PM</text>
 
-    <rect x="310" y="24" width="250" height="70" class="box"/>
-    <text x="435" y="58" text-anchor="middle" class="cardnum">3</text>
-    <text x="435" y="82" text-anchor="middle" class="cardlabel">OPEN PORTS</text>
+    <line x1="60" y1="380" x2="1010" y2="380" stroke="#d8dce2" stroke-width="1.5"/>
+    <text x="60" y="420" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#2b2d31">Port discovery completed</text>
+    <text x="60" y="445" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#5d6671">2 reachable service ports detected</text>
+    <text x="905" y="420" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#5d6671">10/5/2026, 10:28 PM</text>
 
-    <rect x="590" y="24" width="250" height="70" class="box"/>
-    <text x="715" y="58" text-anchor="middle" class="cardnum">0</text>
-    <text x="715" y="82" text-anchor="middle" class="cardlabel">OPEN ALERTS</text>
-
-    <rect x="870" y="24" width="250" height="70" class="box"/>
-    <text x="995" y="58" text-anchor="middle" class="cardnum">Yes</text>
-    <text x="995" y="82" text-anchor="middle" class="cardlabel">AUTHORIZED</text>
-  </g>
-
-  <g transform="translate(100,470)">
-    <rect x="0" y="0" width="1200" height="235" class="panel"/>
-    <text x="30" y="46" class="section">Diagnostic Checks</text>
-    <line x1="30" y1="65" x2="1170" y2="65" class="line"/>
-    <text x="30" y="100" class="tablehead">CHECK</text>
-    <text x="510" y="100" class="tablehead">STATUS</text>
-    <text x="720" y="100" class="tablehead">RESULT</text>
-
-    <line x1="30" y1="112" x2="1170" y2="112" class="line"/>
-    <text x="30" y="150" class="tablecell">ICMP Ping</text>
-    <text x="510" y="150" class="tablecell">OK</text>
-    <text x="720" y="150" class="tablecell">24 ms</text>
-
-    <text x="30" y="190" class="tablecell">DNS Resolution</text>
-    <text x="510" y="190" class="tablecell">OK</text>
-    <text x="720" y="190" class="tablecell">12 ms</text>
-
-    <text x="30" y="230" class="tablecell">HTTP Health</text>
-    <text x="510" y="230" class="tablecell">OK</text>
-    <text x="720" y="230" class="tablecell">31 ms</text>
-
-    <text x="30" y="270" class="tablecell">TCP Connectivity</text>
-    <text x="510" y="270" class="tablecell">OK</text>
-    <text x="720" y="270" class="tablecell">18 ms</text>
+    <line x1="60" y1="465" x2="1010" y2="465" stroke="#d8dce2" stroke-width="1.5"/>
+    <text x="60" y="505" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Authorization verified</text>
+    <text x="60" y="530" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#5d6671">Target confirmed as an authorized monitoring asset</text>
+    <text x="905" y="505" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#5d6671">10/5/2026, 10:27 PM</text>
   </g>
 </svg>

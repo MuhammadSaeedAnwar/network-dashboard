@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720">
+  <rect width="1400" height="720" fill="#f3f3f3"/>
+  <text x="100" y="90" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Network Troubleshooting &amp; Security Dashboard</text>
+  <text x="100" y="130" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#6a7280">Authorized-only diagnostics and service discovery for hosts you own or are explicitly authorized to test.</text>
+  <text x="100" y="170" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#6d7580" letter-spacing="1.5">PORTFOLIO DEMO MODE</text>
+  <text x="785" y="170" font-size="17" font-family="Segoe UI, Arial, sans-serif" fill="#6d7580">Simulated diagnostic results — no live systems are scanned.</text>
+
+  <g transform="translate(100,210)">
+    <rect x="0" y="0" width="1200" height="110" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="28" y="36" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">HOST DETAILS</text>
+    <text x="28" y="84" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Development Server</text>
+    <text x="28" y="109" font-size="28" font-family="Segoe UI, Arial, sans-serif" fill="#2b2d31">192.168.1.35</text>
+    <rect x="1035" y="40" width="95" height="28" rx="14" fill="#f7edc8" stroke="#c19a48" stroke-width="1.5"/>
+    <text x="1082" y="60" text-anchor="middle" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#a6701d">WARNING</text>
+  </g>
+
+  <g transform="translate(100,340)">
+    <rect x="0" y="0" width="1200" height="90" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <rect x="30" y="18" width="250" height="54" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="155" y="46" text-anchor="middle" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">142 ms</text>
+    <text x="155" y="72" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#66727d" letter-spacing="2">LATENCY</text>
+
+    <rect x="310" y="18" width="250" height="54" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="435" y="46" text-anchor="middle" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">2</text>
+    <text x="435" y="72" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#66727d" letter-spacing="2">OPEN PORTS</text>
+
+    <rect x="590" y="18" width="250" height="54" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="715" y="46" text-anchor="middle" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">1</text>
+    <text x="715" y="72" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#66727d" letter-spacing="2">OPEN ALERTS</text>
+
+    <rect x="870" y="18" width="250" height="54" rx="8" fill="#f4f4f4" stroke="#d9dde2" stroke-width="2"/>
+    <text x="995" y="46" text-anchor="middle" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Yes</text>
+    <text x="995" y="72" text-anchor="middle" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#66727d" letter-spacing="2">AUTHORIZED</text>
+  </g>
+
+  <g transform="translate(100,455)">
+    <rect x="0" y="0" width="1200" height="210" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="30" y="40" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Diagnostic Checks</text>
+    <line x1="30" y1="58" x2="1170" y2="58" stroke="#dce1e7" stroke-width="1.5"/>
+    <text x="30" y="92" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">CHECK</text>
+    <text x="500" y="92" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">STATUS</text>
+    <text x="720" y="92" font-size="17" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#69737c" letter-spacing="2">RESULT</text>
+
+    <line x1="30" y1="106" x2="1170" y2="106" stroke="#dce1e7" stroke-width="1.5"/>
+    <text x="30" y="146" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">ICMP Ping</text>
+    <text x="500" y="146" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">WARNING</text>
+    <text x="720" y="146" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">142 ms</text>
+
+    <text x="30" y="186" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">DNS Resolution</text>
+    <text x="500" y="186" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">OK</text>
+    <text x="720" y="186" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">16 ms</text>
+
+    <text x="30" y="226" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">HTTP Health</text>
+    <text x="500" y="226" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">WARNING</text>
+    <text x="720" y="226" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2f343b">188 ms</text>
+  </g>
+</svg>

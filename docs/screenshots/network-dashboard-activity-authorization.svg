@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
+  <rect width="1400" height="620" fill="#f3f3f3"/>
+  <g transform="translate(100,60)">
+    <rect x="0" y="0" width="1200" height="500" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="30" y="50" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Recent Activity</text>
+
+    <line x1="30" y1="78" x2="1170" y2="78" stroke="#d8dce2" stroke-width="1.5"/>
+    <text x="30" y="126" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#2b2d31">Health checks completed</text>
+    <text x="30" y="152" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#646d77">ICMP, DNS, HTTP and TCP checks for 192.168.1.35</text>
+    <text x="970" y="126" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#646d77">10/5/2026, 10:30 PM</text>
+
+    <line x1="30" y1="168" x2="1170" y2="168" stroke="#d8dce2" stroke-width="1.5"/>
+    <text x="30" y="216" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#2b2d31">Port discovery completed</text>
+    <text x="30" y="242" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#646d77">2 reachable service ports detected</text>
+    <text x="970" y="216" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#646d77">10/5/2026, 10:28 PM</text>
+
+    <line x1="30" y1="258" x2="1170" y2="258" stroke="#d8dce2" stroke-width="1.5"/>
+    <text x="30" y="306" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Authorization verified</text>
+    <text x="30" y="332" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#646d77">Target confirmed as an authorized monitoring asset</text>
+    <text x="970" y="306" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#646d77">10/5/2026, 10:27 PM</text>
+  </g>
+</svg>

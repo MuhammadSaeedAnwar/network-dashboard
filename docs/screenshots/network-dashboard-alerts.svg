@@ -1,50 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
-  <defs>
-    <style>
-      .bg { fill: #f3f3f3; }
-      .panel { fill: #f8f8f8; stroke: #d3d7dc; stroke-width: 2; }
-      .header { font: 700 40px 'Segoe UI', sans-serif; fill: #2d3137; }
-      .sub { font: 400 24px 'Segoe UI', sans-serif; fill: #6f7782; }
-      .small { font: 600 18px 'Segoe UI', sans-serif; fill: #737d88; letter-spacing: 2px; }
-      .tablehead { font: 600 18px 'Segoe UI', sans-serif; fill: #666e78; letter-spacing: 2px; }
-      .row { font: 500 21px 'Segoe UI', sans-serif; fill: #2f343b; }
-      .warn { font: 700 16px 'Segoe UI', sans-serif; fill: #a47218; }
-      .crit { font: 700 16px 'Segoe UI', sans-serif; fill: #bf4d4d; }
-      .button { fill: #f6f6f6; stroke: #c7ccd2; stroke-width: 1.5; }
-      .buttontext { font: 600 20px 'Segoe UI', sans-serif; fill: #4c5660; }
-      .warnpill { fill: #f7efc8; stroke: #c7a95f; stroke-width: 1.5; }
-      .critpill { fill: #f8dcdc; stroke: #cd7070; stroke-width: 1.5; }
-      .line { stroke: #dfe3e8; stroke-width: 1.5; }
-      .muted { fill: #6c7179; }
-    </style>
-  </defs>
-  <rect class="bg" width="1400" height="760"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
+  <rect width="1400" height="620" fill="#f3f3f3"/>
+  <g transform="translate(100,60)">
+    <rect x="0" y="0" width="1200" height="480" rx="12" fill="#f7f7f7" stroke="#d7dce2" stroke-width="2"/>
+    <text x="30" y="52" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2b2d31">Open alerts</text>
+    <line x1="30" y1="80" x2="1170" y2="80" stroke="#d8dce2" stroke-width="2"/>
 
-  <g transform="translate(100,70)">
-    <rect x="0" y="0" width="1200" height="570" class="panel"/>
-    <text x="30" y="54" class="header">Open alerts</text>
-    <line x1="30" y1="86" x2="1170" y2="86" class="line"/>
-    <text x="30" y="115" class="tablehead">RAISED</text>
-    <text x="260" y="115" class="tablehead">SEVERITY</text>
-    <text x="420" y="115" class="tablehead">SOURCE</text>
-    <text x="590" y="115" class="tablehead">MESSAGE</text>
+    <text x="30" y="110" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">RAISED</text>
+    <text x="260" y="110" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">SEVERITY</text>
+    <text x="420" y="110" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">SOURCE</text>
+    <text x="590" y="110" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#717b86" letter-spacing="2">MESSAGE</text>
 
-    <line x1="30" y1="125" x2="1170" y2="125" class="line"/>
-    <text x="30" y="170" class="row">10/5/2026, 10:25:00 PM</text>
-    <rect x="260" y="147" width="94" height="28" rx="14" class="warnpill"/>
-    <text x="307" y="167" text-anchor="middle" class="warn">WARNING</text>
-    <text x="420" y="170" class="row">health_check</text>
-    <text x="590" y="170" class="row">HTTP response latency exceeded the configured warning threshold.</text>
-    <rect x="1095" y="143" width="82" height="38" rx="8" class="button"/>
-    <text x="1136" y="169" text-anchor="middle" class="buttontext">Resolve</text>
+    <line x1="30" y1="125" x2="1170" y2="125" stroke="#e1e5ea" stroke-width="1.5"/>
 
-    <line x1="30" y1="195" x2="1170" y2="195" class="line"/>
-    <text x="30" y="240" class="row">10/5/2026, 10:20:00 PM</text>
-    <rect x="260" y="217" width="92" height="28" rx="14" class="critpill"/>
-    <text x="306" y="237" text-anchor="middle" class="crit">CRITICAL</text>
-    <text x="420" y="240" class="row">health_check</text>
-    <text x="590" y="240" class="row">Host health check failed: target did not respond.</text>
-    <rect x="1095" y="213" width="82" height="38" rx="8" class="button"/>
-    <text x="1136" y="239" text-anchor="middle" class="buttontext">Resolve</text>
+    <text x="30" y="170" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#292f36">10/5/2026, 10:25:00 PM</text>
+    <rect x="260" y="145" width="94" height="28" rx="14" fill="#f6edc8" stroke="#cbaf55" stroke-width="1.5"/>
+    <text x="307" y="165" text-anchor="middle" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#a7781d">WARNING</text>
+    <text x="420" y="170" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">health_check</text>
+    <text x="590" y="170" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">HTTP response latency exceeded the configured warning threshold.</text>
+    <rect x="1095" y="141" width="82" height="38" rx="8" fill="#f5f5f5" stroke="#c7ccd2" stroke-width="1.5"/>
+    <text x="1136" y="167" text-anchor="middle" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#4c5660">Resolve</text>
+
+    <line x1="30" y1="195" x2="1170" y2="195" stroke="#e1e5ea" stroke-width="1.5"/>
+    <text x="30" y="240" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#292f36">10/5/2026, 10:20:00 PM</text>
+    <rect x="260" y="215" width="92" height="28" rx="14" fill="#f9dcdc" stroke="#ca7b7b" stroke-width="1.5"/>
+    <text x="306" y="235" text-anchor="middle" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c65151">CRITICAL</text>
+    <text x="420" y="240" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">health_check</text>
+    <text x="590" y="240" font-size="21" font-family="Segoe UI, Arial, sans-serif" fill="#303840">Host health check failed: target did not respond.</text>
+    <rect x="1095" y="211" width="82" height="38" rx="8" fill="#f5f5f5" stroke="#c7ccd2" stroke-width="1.5"/>
+    <text x="1136" y="237" text-anchor="middle" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="600" fill="#4c5660">Resolve</text>
   </g>
 </svg>
