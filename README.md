@@ -1,6 +1,6 @@
 # Network Troubleshooting & Security Dashboard
 
-A dashboard for running ** authorised-only ** network diagnostics and basic
+A dashboard for running **authorized-only** network diagnostics and basic
 Nmap service discovery against hosts you own or are explicitly permitted
 to test — with results stored in PostgreSQL, automatic issue detection,
 and a REST API + React frontend.
@@ -13,6 +13,27 @@ and troubleshooting tooling — not a general-purpose security scanner.
 > attacks, persistence, evasion, or malware.** It observes and reports on
 > hosts you've explicitly registered as authorized. See "Authorized
 > scanning" below for exactly how that's enforced.
+
+## Screenshots
+
+These screenshots show the main dashboard views and the host-detail flow for
+this project.
+
+### Dashboard overview
+
+![Dashboard overview](docs/screenshots/network-dashboard-overview.svg)
+
+### Open alerts
+
+![Open alerts](docs/screenshots/network-dashboard-alerts.svg)
+
+### Host detail view
+
+![Host detail view](docs/screenshots/network-dashboard-host-detail.svg)
+
+### Security controls and recent activity
+
+![Security controls and recent activity](docs/screenshots/network-dashboard-security-activity.svg)
 
 ## 1. Architecture
 
@@ -209,12 +230,12 @@ with `ON DELETE CASCADE`.
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| Frontend shows "Could not reach the backend API" | Backend not running, or wrong `VITE_API_BASE_URL` | Check `docker compose logs backend`; confirm the URL baked into the frontend build matches where the backend actually listens |
+| Frontend shows "Could not reach the backend API" | Backend not running, or wrong `VITE_API_BASE_URL` | Check `docker compose logs backend`; confirm the URL baked into the frontend build matches wher[...]
 | `422 Unprocessable Entity` on adding a host | `authorized_confirmation` missing/false, or address looks like a CIDR range | Tick the authorization checkbox; use a single IP/hostname, not a `/24` |
-| Scans always fail with "nmap is not installed" | Running the backend outside Docker without nmap installed | `sudo apt install nmap`, or use `docker compose up` (nmap is baked into the backend image) |
-| Ping checks report `critical`/permission errors inside Docker | Unprivileged ICMP sockets can be blocked by the container's default capabilities | See Security section — this is a known, documented limitation, not a silent failure |
-| `psycopg2.OperationalError: could not connect to server` | Postgres not up yet, or wrong `POSTGRES_HOST` | Wait for the `db` healthcheck; set `POSTGRES_HOST=localhost` if running the backend outside Docker |
-| Packet-capture / tshark features do nothing | `ENABLE_PACKET_CAPTURE` is `false` by default, and tshark isn't installed in the backend image by default | Both are intentional — see Security section before changing either |
+| Scans always fail with "nmap is not installed" | Running the backend outside Docker without nmap installed | `sudo apt install nmap`, or use `docker compose up` (nmap is baked into the backend image[...]
+| Ping checks report `critical`/permission errors inside Docker | Unprivileged ICMP sockets can be blocked by the container's default capabilities | See Security section — this is a known, documente[...]
+| `psycopg2.OperationalError: could not connect to server` | Postgres not up yet, or wrong `POSTGRES_HOST` | Wait for the `db` healthcheck; set `POSTGRES_HOST=localhost` if running the backend outside[...]
+| Packet-capture / tshark features do nothing | `ENABLE_PACKET_CAPTURE` is `false` by default, and tshark isn't installed in the backend image by default | Both are intentional — see Security sectio[...]
 
 ## 10. Security considerations
 
@@ -231,7 +252,7 @@ with `ON DELETE CASCADE`.
   service/version banners), nothing more.
 - **Secrets only via environment variables.** `.env` (git-ignored) holds
   the Postgres password; nothing sensitive is hardcoded or checked in.
-- **Database**: parameterised queries only, via SQLAlchemy's ORM (no
+- **Database**: parameterized queries only, via SQLAlchemy's ORM (no
   raw string-built SQL anywhere in the codebase).
 - **Docker**: backend container runs as a non-root user (uid 1000).
   Nmap's `-sT` mode doesn't need elevated privileges, so no extra
